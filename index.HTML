@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suraj's Personal Webpage</title>
+    <style>
+        @font-face {
+            font-family: Algerian;
+            src: url('https://example.com/algerian.ttf'); /* Change the URL to the actual location of the Algerian font */
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #00FF00;
+        }
+        header {
+            background-color: #FF0000;
+            color: #00FF00;
+            padding: 10px 0;
+            text-align: center;
+        }
+        header h1 {
+            font-family: Algerian, sans-serif;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+        nav a {
+            color: #00FF00;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+            transition: background-color 0.3s, color 0.3s;
+            cursor: pointer;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .tabcontent {
+            display: none;
+            padding: 20px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s forwards;
+        }
+        .home, .about, .projects, .contact {
+            background-color: #333;
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 800px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        footer {
+            background-color: #FF0000;
+            color: #00FF00;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+            animation-delay: 1s;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>𝕊𝕦𝕣𝕒𝕛'𝕤 ℙ𝕖𝕣𝕤𝕠𝕟𝕒𝕝 𝕎𝕖𝕓𝕡𝕒𝕘𝕖</h1>
+</header>
+
+<nav>
+    <a onclick="openTab('home')">Home</a>
+    <a onclick="openTab('about')">About Me</a>
+    <a onclick="openTab('projects')">Projects</a>
+    <a onclick="openTab('contact')">Contact</a>
+</nav>
+
+<div id="home" class="tabcontent home">
+    <h2>Home</h2>
+    <p>Welcome to my personal webpage! Here you can find information about me, my projects, and how to contact me. Feel free to explore the different sections.</p>
+</div>
+
+<div id="about" class="tabcontent about">
+    <h2>About Me</h2>
+    <p>Hello! My name is Suraj. I create videos on YouTube. My content ranges from tech reviews to tutorials and vlogs. I love sharing my knowledge and experiences with the world. Welcome to my personal webpage!</p>
+</div>
+
+<div id="projects" class="tabcontent projects">
+    <h2>Projects</h2>
+    <p>Here are some of my recent projects and videos:</p>
+    <ul>
+        <li><a href="https://www.youtube.com/watch?v=example1" target="_blank">Project 1: Tech Review of XYZ Gadget</a></li>
+        <li><a href="https://www.youtube.com/watch?v=example2" target="_blank">Project 2: How to Use ABC Software</a></li>
+        <li><a href="https://www.youtube.com/watch?v=example3" target="_blank">Project 3: A Day in My Life Vlog</a></li>
+    </ul>
+</div>
+
+<div id="contact" class="tabcontent contact">
+    <h2>Contact</h2>
+    <p>You can reach me at:</p>
+    <ul>
+        <li>Email: <a href="mailto:suraj@example.com">suraj@example.com</a></li>
+        <li>YouTube: <a href="https://youtube.com/@ninjagaming-gm8zv?si=hY-bI7nIuInAcNbX" target="_blank">My YouTube Channel</a></li>
+        <li>Twitter: <a href="https://twitter.com/suraj" target="_blank">My Twitter</a></li>
+        <li>Instagram: <a href="https://instagram.com/suraj" target="_blank">My Instagram</a></li>
+    </ul>
+</div>
+
+<footer>
+    <p>&copy; 2024 Suraj. All rights reserved.</p>
+</footer>
+
+<script>
+    function openTab(tabName) {
+        var i, tabcontent;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        document.getElementById(tabName).style.display = "block";
+    }
+    // Default open tab
+    document.addEventListener("DOMContentLoaded", function() {
+        openTab('home');
+    });
+</script>
+
+</body>
+</html>
